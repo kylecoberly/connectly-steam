@@ -2,6 +2,8 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  display: grid;
+  grid-template-rows: auto auto auto;
 }
 
 header {
@@ -60,4 +62,39 @@ a {
 .actions a + a::before {
   content: "|";
   margin-right: 8px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero .call-to-action {
+  position: absolute;
+  bottom: 20%;
+}
+
+.call-to-action {
+  width: 100%;
+  text-align: center;
+}
+
+.call-to-action p {
+  font-size: 36px;
+  color: hsl(36, 4%, 76%);
+}
+.call-to-action a {
+  font-size: 18px;
+  display: inline-block;
+  color: hsl(36, 4%, 76%);
+  border: 2px solid hsl(36, 4%, 36%);
+  padding: 12px;
+  margin-top: 16px;
+  text-transform: uppercase;
+}
+.call-to-action a:hover {
+  border: 2px solid hsl(36, 4%, 96%);
 }
