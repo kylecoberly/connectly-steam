@@ -6,11 +6,14 @@ body {
   grid-template-rows: auto auto auto;
 }
 
+header, main {
+  padding: 12px 48px;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 48px;
   background-color: hsl(222, 18%, 11%);
   color: hsl(36, 4%, 76%);
 }
@@ -108,4 +111,58 @@ img {
 }
 .call-to-action a:hover {
   border: 2px solid hsl(36, 4%, 96%);
+}
+
+main {
+  padding-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: hsl(222, 18%, 11%);
+  color: hsl(36, 4%, 96%);
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.feature-benefit-1 {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 1;
+}
+.feature-benefit-2 {
+  grid-row: 2 / span 1;
+  grid-column: 2 / span 1;
+}
+.feature-benefit-3 {
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+}
+.feature-benefit-4 {
+  grid-row: 3 / span 1;
+  grid-column: 2 / span 1;
+}
+
+.feature-benefit p {
+  margin-bottom: 16px;
+}
+
+.feature-benefit a {
+  text-transform: uppercase;
+  color: hsl(36, 4%, 96%);
+  text-decoration: underline;
+}
+
+main > * {
+  padding: 16px;
+}
+
+.feature-benefit {
+  padding-bottom: 36px;
+}
+
+h3 {
+  font-weight: 800;
+  margin-bottom: 16px;
+  text-transform: uppercase;
 }
