@@ -9,6 +9,11 @@ body {
 header, main {
   padding: 12px 48px;
 }
+@media (max-width: 800px){
+  header, main {
+    padding: 12px;
+  }
+}
 
 header {
   display: flex;
@@ -17,9 +22,20 @@ header {
   background-color: hsl(222, 18%, 11%);
   color: hsl(36, 4%, 76%);
 }
+@media (max-width: 800px){
+  header {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
 
 h1, .primary-navigation {
   display: inline-block;
+}
+@media (max-width: 800px){
+  h1, .primary-navigation {
+    display: block;
+  }
 }
 
 h1 {
@@ -31,14 +47,35 @@ a {
   text-decoration: none;
 }
 
+@media (max-width: 800px){
+  .meta, .actions {
+    width: 100%;
+  }
+}
 .primary-navigation > ul {
   display: flex;
   flex-flow: row nowrap;
   margin-left: 24px;
 }
+@media (max-width: 800px){
+  .primary-navigation > ul {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 0;
+  }
+}
+
 
 .primary-navigation li + li {
   margin-left: 18px;
+}
+@media (max-width: 800px){
+  .primary-navigation li + li {
+    margin-left: 0;
+  }
 }
 
 .primary-navigation a {
@@ -68,7 +105,7 @@ a {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .hero {
@@ -100,6 +137,12 @@ img {
   font-size: 36px;
   color: hsl(36, 4%, 96%);
 }
+@media (max-width: 800px){
+  .call-to-action p {
+    display: none;
+  }
+}
+
 .call-to-action a {
   font-size: 18px;
   display: inline-block;
@@ -125,22 +168,53 @@ h2 {
   font-size: 36px;
   margin-bottom: 16px;
 }
+@media (max-width: 800px){
+  h2 {
+    font-size: 24px;
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 2;
+  }
+}
 
 .feature-benefit-1 {
   grid-row: 2 / span 1;
   grid-column: 1 / span 1;
 }
+@media (max-width: 800px){
+  .feature-benefit-1 {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 2;
+  }
+}
 .feature-benefit-2 {
   grid-row: 2 / span 1;
   grid-column: 2 / span 1;
+}
+@media (max-width: 800px){
+  .feature-benefit-2 {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 2;
+  }
 }
 .feature-benefit-3 {
   grid-row: 3 / span 1;
   grid-column: 1 / span 1;
 }
+@media (max-width: 800px){
+  .feature-benefit-3 {
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 2;
+  }
+}
 .feature-benefit-4 {
   grid-row: 3 / span 1;
   grid-column: 2 / span 1;
+}
+@media (max-width: 800px){
+  .feature-benefit-4 {
+    grid-row: 5 / span 1;
+    grid-column: 1 / span 2;
+  }
 }
 
 .feature-benefit p {
